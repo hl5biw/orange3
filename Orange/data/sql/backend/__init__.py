@@ -9,3 +9,8 @@ try:
     from .mssql import PymssqlBackend
 except ImportError:
     pass
+
+try:
+    from .mariadb import MariaDBBackend
+except ImportError:
+    pass
