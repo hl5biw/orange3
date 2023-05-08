@@ -1,26 +1,11 @@
 import logging
-# logger = logging.getLogger(__name__)
-# logger.setLevel(logging.DEBUG)
-# 
-# handler = logging.FileHandler('/home/hevpds/mariadb.log')
-# handler.setLevel(logging.DEBUG)
-# 
-# formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-# handler.setFormatter(formatter)
-# 
-# logger.addHandler(handler)
-
 import re
 import warnings
 from contextlib import contextmanager
-#from time import time
-# from typing import Any, Optional
-
 import mariadb
 
 from Orange.data import ContinuousVariable, DiscreteVariable, StringVariable, TimeVariable, Variable
 from Orange.data.sql.backend.base import Backend, ToSql, BackendError
-
 
 def parse_ex(ex: Exception) -> str:
     try:
